@@ -4,7 +4,7 @@ extern ADC_HandleTypeDef hadc1;
 extern DMA_HandleTypeDef hdma_adc1;
 
 uint16_t AD_Value[2];
-int weather_flag;	//0为雨天，1为晴天
+weather_status weather_flag;	//0为雨天，1为晴天
 int light,temperature,humidity;         //光照强度，温度，湿度
 int16_t threshold_light = 350;			//光照阈值（光越暗值越大）
 int16_t threshold_humidity = 60;		//湿度阈值
@@ -27,11 +27,11 @@ void Photosensitive_adc()
 	
 	if(AD_Value[1]>threshold_rain)		//判断是否下雨
 	{
-		weather_flag = 1;
+		weather_flag = sun;
 	}
 	else
 	{
-		weather_flag = 0;
+		weather_flag = rain;
 	}
 	light = AD_Value[0];				//更新光照强度
 	

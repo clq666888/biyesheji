@@ -47,4 +47,5 @@ bishe\servo.o: ..\mycode\Flash.h
 bishe\servo.o: ..\mycode\key.h
 bishe\servo.o: ..\mycode\menu.h
 bishe\servo.o: ..\mycode\mode.h
+bishe\servo.o: ..\mycode\Bluetooth.h
 bishe\servo.o: ..\mycode\demo.h

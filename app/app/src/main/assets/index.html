@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>窗帘蓝牙控制 · 界面原型</title>
+<style>
+:root{--ink:#172331;--muted:#738091;--line:#e6ebf1;--blue:#2868e8;--blue2:#eaf1ff;--green:#168765;--bg:#f2f5f9;--card:#fff;--shadow:0 24px 70px #20324b20}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(135deg,#e8eef7,#f7f8fb 55%,#eaf0f7);font-family:Inter,"Microsoft YaHei",system-ui,sans-serif;color:var(--ink);min-height:100vh;display:grid;place-items:center;padding:28px}
+.scene{display:flex;align-items:center;gap:36px;max-width:980px;width:100%}.phone{width:390px;min-width:320px;height:min(844px,calc(100vh - 56px));min-height:700px;background:#f6f8fb;border:9px solid #17212c;border-radius:42px;box-shadow:var(--shadow);overflow:hidden;position:relative;display:flex;flex-direction:column}.notch{position:absolute;top:0;left:50%;transform:translateX(-50%);height:23px;width:112px;background:#17212c;border-radius:0 0 16px 16px;z-index:3}.statusbar{height:34px;padding:8px 21px 0;font-size:11px;font-weight:700;display:flex;justify-content:space-between;letter-spacing:.2px}.appbar{padding:10px 21px 16px;display:flex;justify-content:space-between;align-items:center}.brand{display:flex;gap:11px;align-items:center}.logo{width:38px;height:38px;background:var(--blue);border-radius:13px;display:grid;place-items:center;color:#fff;font-size:20px;box-shadow:0 6px 15px #2868e844}.title{font-size:17px;font-weight:750;letter-spacing:.1px}.subtitle{font-size:11px;color:var(--muted);margin-top:3px}.connect{border:1px solid var(--line);border-radius:13px;padding:8px 11px;background:white;font-size:11px;color:#465365;display:flex;align-items:center;gap:6px;font-weight:650}.dot{width:7px;height:7px;background:#98a4b3;border-radius:50%}.connect.on{color:var(--green);background:#eef9f5;border-color:#cdeade}.connect.on .dot{background:#21a477;box-shadow:0 0 0 3px #21a47720}.top-actions{display:flex;align-items:center;gap:6px}.lang{border:1px solid var(--line);border-radius:11px;padding:8px 9px;background:white;color:#465365;font-size:11px;font-weight:750;cursor:pointer}
+main{padding:0 17px 14px;overflow:auto;flex:1}.device-card{background:linear-gradient(120deg,#1f5bcf,#3b81f4);border-radius:21px;padding:17px;color:white;display:flex;align-items:center;justify-content:space-between;box-shadow:0 9px 20px #2868e82b}.device-kicker{font-size:10px;opacity:.76;letter-spacing:.5px}.device-name{font-weight:700;font-size:15px;margin-top:5px}.device-sub{font-size:11px;opacity:.78;margin-top:4px}.device-icon{height:48px;width:48px;border-radius:16px;background:#ffffff25;display:grid;place-items:center;font-size:24px}.tabs{display:flex;margin:17px 2px 15px;border-bottom:1px solid var(--line);gap:24px}.tab{padding:0 2px 11px;color:#8b97a7;font-size:13px;font-weight:650;cursor:pointer;position:relative}.tab.active{color:var(--blue)}.tab.active:after{content:"";height:2px;background:var(--blue);position:absolute;bottom:-1px;left:0;right:0;border-radius:2px}.section-head{display:flex;justify-content:space-between;align-items:center;margin:15px 2px 10px}.section-title{font-size:13px;font-weight:750}.tiny{font-size:10px;color:#929eac}.card{background:var(--card);border:1px solid #e9edf3;border-radius:18px;padding:15px;margin-bottom:12px;box-shadow:0 3px 10px #263a5107}.state-row{display:flex;justify-content:space-between;align-items:center}.state-label{font-size:11px;color:var(--muted)}.state-value{font-size:13px;font-weight:700;margin-top:4px}.badge{font-size:10px;border-radius:99px;background:#f1f4f8;color:#7c8795;padding:6px 9px}.badge.connected{background:#e9f8f2;color:#168765}.drive-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.action{border:0;border-radius:16px;min-height:91px;text-align:left;padding:14px;color:#536174;background:#e9edf3;box-shadow:none;cursor:pointer;transition:.18s}.action.active{color:#fff;background:linear-gradient(140deg,#2868e8,#4c88f6);box-shadow:0 8px 16px #2868e82c}.action:active,.mode:active,.send:active{transform:scale(.98)}.action b{display:block;font-size:14px}.action .statehint{display:block;font-size:10px;margin-top:8px;color:#8591a0}.action.active .statehint{color:#e2ebff}.state-line{font-size:11px;color:#8591a0;margin:10px 3px 0}.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:#f1f4f8;padding:5px;border-radius:13px}.mode{border:0;border-radius:10px;background:transparent;padding:10px 3px;color:#687586;font-size:11px;font-weight:650;cursor:pointer}.mode.active{background:white;color:var(--blue);box-shadow:0 2px 7px #293a5014}.info{display:grid;grid-template-columns:1fr 1fr;gap:8px}.metric{border-radius:13px;background:#f6f8fb;padding:11px}.metric label{font-size:10px;color:var(--muted)}.metric strong{display:block;font-size:17px;margin-top:5px}.metric em{font-style:normal;font-size:10px;color:#91a0b1;font-weight:500}.setting{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #eef1f5}.setting:last-of-type{border-bottom:0}.setting-name{font-weight:700;font-size:12px}.setting-hint{font-size:10px;color:var(--muted);margin-top:4px}.input{width:102px;height:38px;border:1px solid #dfe5ed;border-radius:11px;padding:0 10px;font-size:14px;font-weight:700;text-align:right;color:var(--ink);outline:none}.input:focus{border-color:#6d9af5;box-shadow:0 0 0 3px #2868e815}.send{width:100%;border:0;border-radius:12px;background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:12px;margin-top:11px;cursor:pointer}.syncbox{display:flex;align-items:center;justify-content:space-between;background:#f6f8fb;padding:12px;border-radius:13px}.date{font-size:13px;font-weight:700}.time{font-size:10px;color:var(--muted);margin-top:4px}.syncbtn{border:1px solid #dbe6fb;background:white;color:var(--blue);font-size:11px;font-weight:700;padding:9px 11px;border-radius:10px;cursor:pointer}.packet{font:11px/1.5 ui-monospace,Consolas,monospace;color:#d5e2fa;background:#172535;border-radius:12px;padding:11px 12px;word-break:break-all}.packet span{color:#83b2ff}.packetmeta{display:flex;justify-content:space-between;color:#94a2b4;font-size:10px;margin-top:7px}.log-empty{font-size:11px;color:#8b97a7;text-align:center;padding:10px 0}.footnote{font-size:10px;color:#99a4b1;text-align:center;padding:4px 0 2px}.nav{height:25px;display:grid;place-items:center}.nav:after{content:"";width:106px;height:4px;background:#263342;border-radius:9px}.side{max-width:430px}.eyebrow{font-size:11px;text-transform:uppercase;color:#5276b3;letter-spacing:1.7px;font-weight:800}.side h1{font-size:31px;line-height:1.18;letter-spacing:-.7px;margin:12px 0}.side p{color:#657386;font-size:14px;line-height:1.75}.notes{display:grid;gap:10px;margin-top:22px}.note{display:flex;gap:11px;align-items:flex-start;background:#ffffffa8;border:1px solid #e1e7ef;border-radius:14px;padding:12px 13px}.num{flex:none;width:23px;height:23px;background:#eaf1ff;color:var(--blue);border-radius:8px;display:grid;place-items:center;font-size:11px;font-weight:800}.note b{font-size:12px}.note div div{font-size:11px;color:#758294;margin-top:3px;line-height:1.5}.toast{position:absolute;bottom:48px;left:50%;transform:translate(-50%,10px);opacity:0;pointer-events:none;background:#1c2a39;color:white;padding:10px 14px;border-radius:30px;font-size:11px;transition:.2s;white-space:nowrap;box-shadow:0 5px 18px #0003}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){body{padding:0;background:#f6f8fb;display:block}.scene{display:block}.side{display:none}.phone{height:100dvh;min-height:620px;width:100%;max-width:430px;margin:auto;border-width:0;border-radius:0;box-shadow:none}.notch{height:21px}.statusbar{padding-top:7px}}
+.threshold-warning{margin:0 0 9px;padding:9px 11px;border:1px solid #ffd0d0;border-radius:10px;background:#fff2f2;color:#c62828;font-size:11px;font-weight:700;line-height:1.45}.threshold-warning[hidden]{display:none}
+.time-fields{display:flex;align-items:center;gap:6px}.time-input{width:58px;text-align:center;padding:0 5px;font-variant-numeric:tabular-nums;appearance:textfield;-moz-appearance:textfield}.time-input::-webkit-inner-spin-button,.time-input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.time-separator{font-size:16px;color:var(--muted);font-weight:700}
+</style>
+</head>
+<body>
+<div class="scene">
+<div class="phone">
+<div class="notch"></div>
+<div class="statusbar"><span>9:41</span><span>●●●　▰　100%</span></div>
+<header class="appbar">
+  <div class="brand"><div class="logo">⌂</div><div><div class="title" data-zh="智能窗帘" data-en="Smart Curtain">智能窗帘</div><div class="subtitle" data-zh="蓝牙控制面板" data-en="Bluetooth control">蓝牙控制面板</div></div></div>
+  <div class="top-actions"><button class="lang" id="langToggle">EN</button><button class="connect" id="connect"><i class="dot"></i><span id="connectText">连接设备</span></button></div>
+</header>
+<main>
+  <div class="device-card"><div><div class="device-kicker">BLUETOOTH SPP</div><div class="device-name" id="deviceName">尚未连接</div><div class="device-sub" id="deviceSub">点击连接已配对设备</div></div><div class="device-icon">ᛒ</div></div>
+  <div class="tabs"><div class="tab active" data-page="control" data-zh="设备控制" data-en="Control">设备控制</div><div class="tab" data-page="settings" data-zh="参数设置" data-en="Settings">参数设置</div></div>
+  <section id="controlPage">
+    <div class="section-head"><div class="section-title" data-zh="窗帘控制" data-en="Curtain control">窗帘控制</div></div>
+    <div class="drive-grid">
+      <button class="action" data-cmd="01"><b data-zh="打开窗帘" data-en="Open curtain">打开窗帘</b><span class="statehint" data-zh="点击后设为打开" data-en="Tap to set open">点击后设为打开</span></button>
+      <button class="action" data-cmd="02"><b data-zh="关闭窗帘" data-en="Close curtain">关闭窗帘</b><span class="statehint" data-zh="点击后设为关闭" data-en="Tap to set closed">点击后设为关闭</span></button>
+    </div>
+    <div class="state-line" id="curtainState">当前状态：未知</div>
+    <div class="section-head"><div class="section-title" data-zh="运行模式" data-en="Operating mode">运行模式</div></div>
+    <div class="card"><div class="modes"><button class="mode active" data-cmd="11" data-zh="手动" data-en="Manual">手动</button><button class="mode" data-cmd="12" data-zh="自动" data-en="Auto">自动</button><button class="mode" data-cmd="13" data-zh="定时" data-en="Timer">定时</button></div></div>
+    <div class="section-head"><div class="section-title" data-zh="设备信息" data-en="Device information">设备信息</div></div>
+    <div class="card"><div class="info"><div class="metric"><label data-zh="天气" data-en="Weather">天气</label><strong id="weatherValue">—</strong></div><div class="metric"><label data-zh="温度" data-en="Temperature">温度</label><strong id="temperatureValue">—</strong></div><div class="metric"><label data-zh="湿度" data-en="Humidity">湿度</label><strong id="humidityValue">—</strong></div><div class="metric"><label data-zh="光照" data-en="Light">光照</label><strong id="lightValue">—</strong></div></div></div>
+  </section>
+  <section id="settingsPage" hidden>
+    <div class="section-head"><div class="section-title" data-zh="传感器阈值" data-en="Sensor thresholds">传感器阈值</div></div>
+    <div class="card">
+      <div class="threshold-warning" id="lightWarning" role="alert" aria-live="assertive" hidden></div>
+      <div class="setting"><div><div class="setting-name" data-zh="光照阈值" data-en="Light threshold">光照阈值</div><div class="setting-hint" data-zh="范围 0–4095" data-en="Range 0–4095">范围 0–4095</div></div><input class="input" id="light" type="number" min="0" max="4095" value="1000"></div>
+      <button class="send" id="sendLight" data-zh="发送光照阈值" data-en="Set light threshold">发送光照阈值</button>
+    </div>
+    <div class="card">
+      <div class="threshold-warning" id="humidityWarning" role="alert" aria-live="assertive" hidden></div>
+      <div class="setting"><div><div class="setting-name" data-zh="湿度阈值" data-en="Humidity threshold">湿度阈值</div><div class="setting-hint" data-zh="范围 0–100" data-en="Range 0–100">范围 0–100</div></div><input class="input" id="humidity" type="number" min="0" max="100" value="60"></div>
+      <button class="send" id="sendHumidity" data-zh="发送湿度阈值" data-en="Set humidity threshold">发送湿度阈值</button>
+    </div>
+    <div class="section-head"><div class="section-title" data-zh="定时设置" data-en="Timer settings">定时设置</div><div class="tiny" data-zh="仅在定时模式下生效" data-en="Only active in timer mode">仅在定时模式下生效</div></div>
+    <div class="card">
+      <div class="threshold-warning" id="timerWarning" role="alert" aria-live="assertive" hidden></div>
+      <div class="setting"><div><div class="setting-name" data-zh="开始时间" data-en="Start time">开始时间</div></div><div class="time-fields"><input class="input time-input" id="timerStartHour" type="text" inputmode="numeric" maxlength="2" pattern="[0-9]{1,2}" placeholder="时" aria-label="开始小时"><span class="time-separator">:</span><input class="input time-input" id="timerStartMinute" type="text" inputmode="numeric" maxlength="2" pattern="[0-9]{1,2}" placeholder="分" aria-label="开始分钟"></div></div>
+      <div class="setting"><div><div class="setting-name" data-zh="结束时间" data-en="End time">结束时间</div></div><div class="time-fields"><input class="input time-input" id="timerEndHour" type="text" inputmode="numeric" maxlength="2" pattern="[0-9]{1,2}" placeholder="时" aria-label="结束小时"><span class="time-separator">:</span><input class="input time-input" id="timerEndMinute" type="text" inputmode="numeric" maxlength="2" pattern="[0-9]{1,2}" placeholder="分" aria-label="结束分钟"></div></div>
+      <button class="send" id="sendTimer" data-zh="发送定时设置" data-en="Set timer">发送定时设置</button>
+    </div>
+    <div class="section-head"><div class="section-title" data-zh="同步手机时间" data-en="Sync phone time">同步手机时间</div></div>
+    <div class="card"><div class="syncbox"><div><div class="date" id="dateNow">—</div><div class="time" id="timeNow">读取中</div></div><button class="syncbtn" id="syncTime" data-zh="同步时间" data-en="Sync time">同步时间</button></div></div>
+  </section>
+  <div class="section-head"><div class="section-title" data-zh="最近发送" data-en="Last command">最近发送</div></div>
+  <div class="packet" id="packet"><span>—</span></div>
+  <div class="packetmeta"><span id="packetLabel">帧内容以十六进制显示</span><span id="packetLen">0 bytes</span></div>
+  <div class="footnote" data-zh="蓝牙SPP · 连接设备后可操作" data-en="Bluetooth SPP · Connect to control">蓝牙SPP · 连接设备后可操作</div>
+</main>
+<div class="nav"></div><div class="toast" id="toast">已生成命令帧</div>
+</div>
+<aside class="side">
+  <div class="eyebrow" id="eyebrow">Android SPP · UI concept</div>
+  <h1 id="sideTitle">先看界面，<br>再定交互。</h1>
+  <p id="sideCopy">这是手机端的可点击原型。点右上角可模拟连接；切换页面、操作按钮或设置阈值，底部会显示按当前协议生成的数据帧。</p>
+  <div class="notes">
+    <div class="note"><span class="num">1</span><div><b id="note1Title">控制页</b><div id="note1Copy">开关窗帘、切换手动/自动/定时模式。</div></div></div>
+    <div class="note"><span class="num">2</span><div><b id="note2Title">设置页</b><div id="note2Copy">发送光照、湿度阈值，并用 E2 30 同步手机时间。</div></div></div>
+    <div class="note"><span class="num">3</span><div><b id="note3Title">帧预览</b><div id="note3Copy">展示实际二进制帧的十六进制表示；数值字段按小端序组装。</div></div></div>
+  </div>
+</aside>
+</div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+let connected=false, language='zh', curtain='unknown';
+const text=(zh,en)=>language==='zh'?zh:en;
+function setLanguage(){document.documentElement.lang=language==='zh'?'zh-CN':'en';$('#sideTitle').innerHTML=language==='zh'?'先看界面，<br>再定交互。':'Preview the interface,<br>then refine the flow.';$('#sideCopy').textContent=language==='zh'?'这是手机端的可点击原型。可模拟连接、操作按钮并查看对应数据帧。':'This clickable mobile preview simulates connection and controls, and shows the matching data frames.';$('#eyebrow').textContent=language==='zh'?'Android SPP · 界面概念':'Android SPP · UI concept';$('#note1Title').textContent=language==='zh'?'控制页':'Controls';$('#note1Copy').textContent=language==='zh'?'开关窗帘、切换手动/自动/定时模式。':'Open or close the curtain and choose a mode.';$('#note2Title').textContent=language==='zh'?'设置页':'Settings';$('#note2Copy').textContent=language==='zh'?'发送光照、湿度阈值，并用 E2 30 同步手机时间。':'Set light and humidity thresholds and sync phone time.';$('#note3Title').textContent=language==='zh'?'帧预览':'Frame preview';$('#note3Copy').textContent=language==='zh'?'显示二进制帧的十六进制内容。':'View the hexadecimal bytes of each frame.';$('#weatherValue').textContent=language==='zh'?'晴天':'Sunny';$$('[data-zh]').forEach(el=>el.textContent=el.dataset[language]);$('#langToggle').textContent=language==='zh'?'EN':'中文';$('#connectText').textContent=connected?text('已连接','Connected'):text('连接设备','Connect');$('#deviceName').textContent=connected?text('SPP 设备','SPP device'):text('尚未连接','Not connected');$('#deviceSub').textContent=connected?text('已建立蓝牙连接','Bluetooth connected'):text('点击连接已配对设备','Connect to a paired device');$('#curtainState').textContent=curtain==='unknown'?text('当前状态：未知','Current state: unknown'):text(`当前状态：${curtain==='open'?'打开':'关闭'}`,`Current state: ${curtain}`)}
+function showFrame(bytes,success){$('#packet').innerHTML=bytes.map(b=>`<span>${b.toString(16).padStart(2,'0').toUpperCase()}</span>`).join(' ');$('#packetLen').textContent=`${bytes.length} bytes`;$('#packetLabel').textContent=text('二进制帧','Binary frame');$('#toast').textContent=success;$('#toast').classList.add('show');clearTimeout(showFrame.t);showFrame.t=setTimeout(()=>$('#toast').classList.remove('show'),2100)}
+function u16le(n){n=Number(n);return[n&255,(n>>8)&255]}
+$('#langToggle').onclick=()=>{language=language==='zh'?'en':'zh';setLanguage()};
+$('#connect').onclick=()=>{connected=!connected;$('#connect').classList.toggle('on',connected);setLanguage()};
+$$('.tab').forEach(t=>t.onclick=()=>{$$('.tab').forEach(x=>x.classList.toggle('active',x===t));$('#controlPage').hidden=t.dataset.page!=='control';$('#settingsPage').hidden=t.dataset.page!=='settings'});
+$$('[data-cmd]').forEach(b=>b.onclick=()=>{let cmd=parseInt(b.dataset.cmd,16);if(b.classList.contains('mode')){$$('.mode').forEach(x=>x.classList.toggle('active',x===b))}else{curtain=cmd===1?'open':'closed';$$('.action').forEach(x=>x.classList.toggle('active',x===b));$('#curtainState').textContent=language==='zh'?`当前状态：${curtain==='open'?'打开':'关闭'}`:`Current state: ${curtain}`}let label={1:text('成功发送开窗指令','Open command sent successfully'),2:text('成功发送关窗指令','Close command sent successfully'),17:text('成功发送手动模式指令','Manual mode command sent successfully'),18:text('成功发送自动模式指令','Auto mode command sent successfully'),19:text('成功发送定时模式指令','Timer mode command sent successfully')}[cmd];showFrame([0xE2,cmd],label)});
+function invalid(input,min,max,warning){let n=input.valueAsNumber;if(!Number.isInteger(n)||n<min||n>max){warning.textContent=language==='zh'?`当前值不合理，请输入 ${min}–${max} 的整数。`:`Invalid value. Enter an integer from ${min} to ${max}.`;warning.hidden=false;return true}warning.hidden=true;warning.textContent='';return false}
+$('#light').addEventListener('input',()=>{if(!$('#lightWarning').hidden)invalid($('#light'),0,4095,$('#lightWarning'))});
+$('#humidity').addEventListener('input',()=>{if(!$('#humidityWarning').hidden)invalid($('#humidity'),0,100,$('#humidityWarning'))});
+$('#sendLight').onclick=()=>{let el=$('#light');if(invalid(el,0,4095,$('#lightWarning')))return;let n=Number(el.value);showFrame([0xE2,0x21,...u16le(n)],text('发送光照阈值设置指令成功','Light threshold command sent successfully'))};
+$('#sendHumidity').onclick=()=>{let el=$('#humidity');if(invalid(el,0,100,$('#humidityWarning')))return;let n=Number(el.value);showFrame([0xE2,0x22,...u16le(n)],text('发送湿度阈值设置指令成功','Humidity threshold command sent successfully'))};
+function readTimerPart(id,max){const value=$('#'+id).value.trim();if(!/^\d{1,2}$/.test(value))return null;const number=Number(value);return number>=0&&number<=max?number:null}
+function readTimer(){const startHour=readTimerPart('timerStartHour',23),startMinute=readTimerPart('timerStartMinute',59),endHour=readTimerPart('timerEndHour',23),endMinute=readTimerPart('timerEndMinute',59);if(startHour===null||startMinute===null||endHour===null||endMinute===null)return{error:'range'};if(startHour*60+startMinute>=endHour*60+endMinute)return{error:'order'};return{values:[startHour,startMinute,endHour,endMinute]}}
+function showTimerError(error){const warning=$('#timerWarning');warning.textContent=error==='order'?text('开始时间必须早于结束时间。','Start time must be earlier than end time.'):text('时间不合理：小时请输入 0–23，分钟请输入 0–59。','Invalid time: hours must be 0–23 and minutes 0–59.');warning.hidden=false}
+$('#sendTimer').onclick=()=>{const result=readTimer();if(result.error){showTimerError(result.error);return}$('#timerWarning').hidden=true;$('#timerWarning').textContent='';showFrame([0xE2,0x40,...result.values],text('发送定时设置指令成功','Timer settings command sent successfully'))};
+['timerStartHour','timerStartMinute','timerEndHour','timerEndMinute'].forEach(id=>{const input=$('#'+id);input.addEventListener('input',()=>{input.value=input.value.replace(/\D/g,'').slice(0,2);if(!$('#timerWarning').hidden){const result=readTimer();if(result.error)showTimerError(result.error);else{$('#timerWarning').hidden=true;$('#timerWarning').textContent=''}}});input.addEventListener('blur',()=>{if(input.value)input.value=input.value.padStart(2,'0');if(!$('#timerWarning').hidden){const result=readTimer();if(result.error)showTimerError(result.error);else{$('#timerWarning').hidden=true;$('#timerWarning').textContent=''}}})});
+function updateClock(){const d=new Date();$('#dateNow').textContent=`${d.getFullYear()}/${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}`;$('#timeNow').textContent=`${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}:${String(d.getSeconds()).padStart(2,'0')}`}
+updateClock();setInterval(updateClock,1000);
+$('#syncTime').onclick=()=>{const d=new Date(),y=d.getFullYear();showFrame([0xE2,0x30,...u16le(y),d.getMonth()+1,d.getDate(),d.getHours(),d.getMinutes(),d.getSeconds()],text('成功发送时间同步指令','Time sync command sent successfully'))};
+setLanguage();
+// Native Android bridge: frames are sent as raw protocol bytes over Bluetooth SPP.
+$('#connect').onclick=()=>{if(window.AndroidBridge){if(AndroidBridge.isConnected())AndroidBridge.disconnect();else AndroidBridge.chooseDevice()}else{connected=!connected;$('#connect').classList.toggle('on',connected);setLanguage()}};
+function showFrame(bytes,success){
+  if(window.AndroidBridge){
+    if(!AndroidBridge.isConnected()){ $('#toast').textContent=text('请先连接已配对设备','Connect to a paired device first'); $('#toast').classList.add('show'); setTimeout(()=>$('#toast').classList.remove('show'),2200); return; }
+    const hex=bytes.map(b=>b.toString(16).padStart(2,'0').toUpperCase()).join(' ');
+    if(!AndroidBridge.sendFrame(hex)){ $('#toast').textContent=text('发送失败，检查蓝牙连接','Send failed. Check Bluetooth connection'); $('#toast').classList.add('show'); setTimeout(()=>$('#toast').classList.remove('show'),2200); return; }
+  }
+  $('#packet').innerHTML=bytes.map(b=>`<span>${b.toString(16).padStart(2,'0').toUpperCase()}</span>`).join(' ');
+  $('#packetLen').textContent=`${bytes.length} bytes`; $('#packetLabel').textContent=text('二进制帧','Binary frame');
+  $('#toast').textContent=success; $('#toast').classList.add('show'); clearTimeout(showFrame.t); showFrame.t=setTimeout(()=>$('#toast').classList.remove('show'),2100)
+}
+window.nativeConnectionChanged=(name,isConnected)=>{
+  connected=isConnected; lastTelemetryAt=isConnected?Date.now():0; $('#connect').classList.toggle('on',isConnected);
+  $('#connectText').textContent=isConnected?text('已连接','Connected'):text('连接设备','Connect');
+  const isProgress=name.startsWith('正在连接')||name.includes('正在尝试兼容连接');
+  const isIdle=name==='已断开';
+  $('#deviceName').textContent=isConnected?name:(isProgress?text('正在连接','Connecting'):(isIdle?text('尚未连接','Not connected'):text('连接失败','Connection failed')));
+  $('#deviceSub').textContent=isConnected?text('已建立蓝牙连接','Bluetooth connected'):(isIdle?text('点击连接已配对设备','Connect to a paired device'):name);
+  if(!isConnected&&!isProgress&&!isIdle){
+    $('#toast').textContent=name; $('#toast').classList.add('show');
+    clearTimeout(window.connectionToastTimer);
+    window.connectionToastTimer=setTimeout(()=>$('#toast').classList.remove('show'),5000);
+  }
+};
+let lastTelemetryAt=0;
+window.updateDeviceTelemetry=(weather,temp,humidity,light)=>{
+  lastTelemetryAt=Date.now();
+  $('#weatherValue').textContent=weather===0?text('雨天','Rainy'):text('晴天','Sunny');
+  $('#temperatureValue').textContent=`${temp}°C`; $('#humidityValue').textContent=`${humidity}%`; $('#lightValue').textContent=String(light);
+  $('#deviceSub').textContent=text('设备数据已更新','Device data updated');
+};
+setInterval(()=>{
+  if(connected && lastTelemetryAt && Date.now()-lastTelemetryAt>3500)
+    $('#deviceSub').textContent=text('设备数据超时，检查模块连接','Telemetry timeout. Check device link');
+},1000);
+</script>
+</body>
+</html>
+
+
+
+

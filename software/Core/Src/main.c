@@ -31,8 +31,6 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-uint8_t rx_buf[1024];
-uint8_t tx_buf[1024];
 uint8_t oled_buf[1024];
 
 int16_t year,month,day,second,minute,hour;
@@ -41,21 +39,11 @@ int16_t year,month,day,second,minute,hour;
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
-{
-  if(huart == &huart1)
-  {
-//	   HAL_UART_Transmit_DMA(huart, rx_buf, Size);
-      sprintf((char*)tx_buf,"date %04d-%02d-%02d  time %02d:%02d:%02d\n",year,month,day,hour,minute,second);
-      HAL_UART_Transmit_DMA(huart, tx_buf, strlen(tx_buf));
-  }
-  HAL_UARTEx_ReceiveToIdle_DMA(huart, (uint8_t *)tx_buf, 1024);
-}
-
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim == &htim4)
 	{
+		Bluetooth_SendDeviceStatus();   //发送设备状态
 		second++;
 		if(second >= 60)
 		{
@@ -144,7 +132,7 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-  HAL_UARTEx_ReceiveToIdle_DMA(&huart1, (uint8_t *)rx_buf, 1024);	//启动蓝牙接收
+  
 	HAL_TIM_Base_Start_IT(&htim4);		//启动定时器4
 
   year = 2026;
@@ -158,7 +146,7 @@ int main(void)
 	Servo_Init();
 	DHT11_Init();
 	OLED_Init();
-	
+	Bluetooth_init();
 	//从flash里获取阈值参数
 	Flash_LoadThresholds();
 	close();	//初始关闭舵机
@@ -192,10 +180,10 @@ int main(void)
 	{
 		OLED_Clear();
 	    menu2_flag = menu1();
-	  if(menu2_flag == 1)	//模式选择
-	  {
-		  menu2_mode();
-	  }
+	    if(menu2_flag == 1)	//模式选择
+	    {
+		    menu2_mode();
+	    }
 		else if(menu2_flag == 2)//阈值设置
 		{
 			menu3_flag = menu2_threshold_setting();

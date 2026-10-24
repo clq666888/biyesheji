@@ -11,17 +11,17 @@ void main_page()
 		OLED_ShowString(1,1,(char*)oled_buf);
 		sprintf((char*)oled_buf,"time %02d:%02d:%02d",hour,minute,second);			//时间
 		OLED_ShowString(2,1,(char*)oled_buf);
-		if(weather_flag)															//天气	
+		if(weather_flag == sun)															//天气	
 			sprintf((char*)oled_buf,"weather:sun ");
 		else 
 			sprintf((char*)oled_buf,"weather:rain");
 		OLED_ShowString(3,1,(char*)oled_buf);
 		if(mode_flag == 1)															//当前模式							
-			sprintf((char*)oled_buf,"hand mode");
+			sprintf((char*)oled_buf,"hand mode      ");
 		else if(mode_flag == 2)
-			sprintf((char*)oled_buf,"automatic mode");
+			sprintf((char*)oled_buf,"automatic mode ");
 		else if(mode_flag == 3)
-			sprintf((char*)oled_buf,"timer mode");
+			sprintf((char*)oled_buf,"timer mode     ");
 		OLED_ShowString(4,1,(char*)oled_buf);
 	}
 	else

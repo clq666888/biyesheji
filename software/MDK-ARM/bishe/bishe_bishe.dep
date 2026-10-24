@@ -1,6 +1,6 @@
 Dependencies for Project 'bishe', Target 'bishe': (DO NOT MODIFY !)
-F (startup_stm32f103xb.s)(0x6ACFA89C)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o bishe\startup_stm32f103xb.o --depend bishe\startup_stm32f103xb.d)
-F (../Core/Src/main.c)(0x6ACFA995)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\main.o --omf_browse bishe\main.crf --depend bishe\main.d)
+F (startup_stm32f103xb.s)(0x6AD79F68)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o bishe\startup_stm32f103xb.o --depend bishe\startup_stm32f103xb.d)
+F (../Core/Src/main.c)(0x6ADB7DFB)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\main.o --omf_browse bishe\main.crf --depend bishe\main.d)
 I (../Core/Inc/main.h)(0x6ACDFE7C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6AC874B4)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6ACA7518)
@@ -36,18 +36,19 @@ I (../Core/Inc/dma.h)(0x6AC8F45E)
 I (../Core/Inc/tim.h)(0x6ACDF48E)
 I (../Core/Inc/usart.h)(0x6AC8F3A1)
 I (../Core/Inc/gpio.h)(0x6AC8DC1A)
-I (../mycode/headfile.h)(0x6ACE3742)
+I (../mycode/headfile.h)(0x6ADADE06)
 I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (../mycode/servo.h)(0x6ACB7BF0)
 I (../mycode/OLED.h)(0x6ACCCF98)
-I (../mycode/my_adc.h)(0x6ACE130D)
+I (../mycode/my_adc.h)(0x6ADB7B2F)
 I (../mycode/DHT11.h)(0x6ACE130D)
 I (../mycode/Flash.h)(0x6ACE4506)
 I (../mycode/key.h)(0x6ACBE137)
 I (../mycode/menu.h)(0x6ACD3116)
 I (../mycode/mode.h)(0x6ACD32F0)
+I (../mycode/Bluetooth.h)(0x6ADB7DED)
 I (../mycode/demo.h)(0x6ACB73E4)
 F (../Core/Src/gpio.c)(0x6ACE0E32)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\gpio.o --omf_browse bishe\gpio.crf --depend bishe\gpio.d)
 I (../Core/Inc/gpio.h)(0x6AC8DC1A)
@@ -81,7 +82,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6AC874B4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6AC874B4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6AC874B4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6AC874B4)
-F (../Core/Src/adc.c)(0x6ACDFE7A)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\adc.o --omf_browse bishe\adc.crf --depend bishe\adc.d)
+F (../Core/Src/adc.c)(0x6AD79F67)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\adc.o --omf_browse bishe\adc.crf --depend bishe\adc.d)
 I (../Core/Inc/adc.h)(0x6ACA7517)
 I (../Core/Inc/main.h)(0x6ACDFE7C)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6AC874B4)
@@ -782,9 +783,9 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6AC874B4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6AC874B4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6AC874B4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6AC874B4)
-F (..\mycode\headfile.h)(0x6ACE3742)()
+F (..\mycode\headfile.h)(0x6ADADE06)()
 F (..\mycode\servo.c)(0x6ACB7C10)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\servo.o --omf_browse bishe\servo.crf --depend bishe\servo.d)
-I (..\mycode\headfile.h)(0x6ACE3742)
+I (..\mycode\headfile.h)(0x6ADADE06)
 I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -825,12 +826,13 @@ I (../Core/Inc/usart.h)(0x6AC8F3A1)
 I (../Core/Inc/gpio.h)(0x6AC8DC1A)
 I (..\mycode\servo.h)(0x6ACB7BF0)
 I (..\mycode\OLED.h)(0x6ACCCF98)
-I (..\mycode\my_adc.h)(0x6ACE130D)
+I (..\mycode\my_adc.h)(0x6ADB7B2F)
 I (..\mycode\DHT11.h)(0x6ACE130D)
 I (..\mycode\Flash.h)(0x6ACE4506)
 I (..\mycode\key.h)(0x6ACBE137)
 I (..\mycode\menu.h)(0x6ACD3116)
 I (..\mycode\mode.h)(0x6ACD32F0)
+I (..\mycode\Bluetooth.h)(0x6ADB7DED)
 I (..\mycode\demo.h)(0x6ACB73E4)
 F (..\mycode\servo.h)(0x6ACB7BF0)()
 F (..\mycode\OLED.c)(0x6ACD2755)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\oled.o --omf_browse bishe\oled.crf --depend bishe\oled.d)
@@ -868,8 +870,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6AC874B4)
 I (..\mycode\OLED_Font.h)(0x6623762F)
 F (..\mycode\OLED.h)(0x6ACCCF98)()
 F (..\mycode\OLED_Font.h)(0x6623762F)()
-F (..\mycode\my_adc.c)(0x6ACE6C2F)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\my_adc.o --omf_browse bishe\my_adc.crf --depend bishe\my_adc.d)
-I (..\mycode\headfile.h)(0x6ACE3742)
+F (..\mycode\my_adc.c)(0x6ADB7B2B)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\my_adc.o --omf_browse bishe\my_adc.crf --depend bishe\my_adc.d)
+I (..\mycode\headfile.h)(0x6ADADE06)
 I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -910,16 +912,17 @@ I (../Core/Inc/usart.h)(0x6AC8F3A1)
 I (../Core/Inc/gpio.h)(0x6AC8DC1A)
 I (..\mycode\servo.h)(0x6ACB7BF0)
 I (..\mycode\OLED.h)(0x6ACCCF98)
-I (..\mycode\my_adc.h)(0x6ACE130D)
+I (..\mycode\my_adc.h)(0x6ADB7B2F)
 I (..\mycode\DHT11.h)(0x6ACE130D)
 I (..\mycode\Flash.h)(0x6ACE4506)
 I (..\mycode\key.h)(0x6ACBE137)
 I (..\mycode\menu.h)(0x6ACD3116)
 I (..\mycode\mode.h)(0x6ACD32F0)
+I (..\mycode\Bluetooth.h)(0x6ADB7DED)
 I (..\mycode\demo.h)(0x6ACB73E4)
-F (..\mycode\my_adc.h)(0x6ACE130D)()
+F (..\mycode\my_adc.h)(0x6ADB7B2F)()
 F (..\mycode\key.c)(0x6ACDF556)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\key.o --omf_browse bishe\key.crf --depend bishe\key.d)
-I (..\mycode\headfile.h)(0x6ACE3742)
+I (..\mycode\headfile.h)(0x6ADADE06)
 I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -960,16 +963,17 @@ I (../Core/Inc/usart.h)(0x6AC8F3A1)
 I (../Core/Inc/gpio.h)(0x6AC8DC1A)
 I (..\mycode\servo.h)(0x6ACB7BF0)
 I (..\mycode\OLED.h)(0x6ACCCF98)
-I (..\mycode\my_adc.h)(0x6ACE130D)
+I (..\mycode\my_adc.h)(0x6ADB7B2F)
 I (..\mycode\DHT11.h)(0x6ACE130D)
 I (..\mycode\Flash.h)(0x6ACE4506)
 I (..\mycode\key.h)(0x6ACBE137)
 I (..\mycode\menu.h)(0x6ACD3116)
 I (..\mycode\mode.h)(0x6ACD32F0)
+I (..\mycode\Bluetooth.h)(0x6ADB7DED)
 I (..\mycode\demo.h)(0x6ACB73E4)
 F (..\mycode\key.h)(0x6ACBE137)()
-F (..\mycode\menu.c)(0x6ACE6D6C)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\menu.o --omf_browse bishe\menu.crf --depend bishe\menu.d)
-I (..\mycode\headfile.h)(0x6ACE3742)
+F (..\mycode\menu.c)(0x6ADB7AEE)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\menu.o --omf_browse bishe\menu.crf --depend bishe\menu.d)
+I (..\mycode\headfile.h)(0x6ADADE06)
 I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -1010,16 +1014,17 @@ I (../Core/Inc/usart.h)(0x6AC8F3A1)
 I (../Core/Inc/gpio.h)(0x6AC8DC1A)
 I (..\mycode\servo.h)(0x6ACB7BF0)
 I (..\mycode\OLED.h)(0x6ACCCF98)
-I (..\mycode\my_adc.h)(0x6ACE130D)
+I (..\mycode\my_adc.h)(0x6ADB7B2F)
 I (..\mycode\DHT11.h)(0x6ACE130D)
 I (..\mycode\Flash.h)(0x6ACE4506)
 I (..\mycode\key.h)(0x6ACBE137)
 I (..\mycode\menu.h)(0x6ACD3116)
 I (..\mycode\mode.h)(0x6ACD32F0)
+I (..\mycode\Bluetooth.h)(0x6ADB7DED)
 I (..\mycode\demo.h)(0x6ACB73E4)
 F (..\mycode\menu.h)(0x6ACD3116)()
 F (..\mycode\mode.c)(0x6ACFA995)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\mode.o --omf_browse bishe\mode.crf --depend bishe\mode.d)
-I (..\mycode\headfile.h)(0x6ACE3742)
+I (..\mycode\headfile.h)(0x6ADADE06)
 I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -1060,16 +1065,17 @@ I (../Core/Inc/usart.h)(0x6AC8F3A1)
 I (../Core/Inc/gpio.h)(0x6AC8DC1A)
 I (..\mycode\servo.h)(0x6ACB7BF0)
 I (..\mycode\OLED.h)(0x6ACCCF98)
-I (..\mycode\my_adc.h)(0x6ACE130D)
+I (..\mycode\my_adc.h)(0x6ADB7B2F)
 I (..\mycode\DHT11.h)(0x6ACE130D)
 I (..\mycode\Flash.h)(0x6ACE4506)
 I (..\mycode\key.h)(0x6ACBE137)
 I (..\mycode\menu.h)(0x6ACD3116)
 I (..\mycode\mode.h)(0x6ACD32F0)
+I (..\mycode\Bluetooth.h)(0x6ADB7DED)
 I (..\mycode\demo.h)(0x6ACB73E4)
 F (..\mycode\mode.h)(0x6ACD32F0)()
 F (..\mycode\demo.c)(0x6ACCE4BC)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\demo.o --omf_browse bishe\demo.crf --depend bishe\demo.d)
-I (..\mycode\headfile.h)(0x6ACE3742)
+I (..\mycode\headfile.h)(0x6ADADE06)
 I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -1110,16 +1116,17 @@ I (../Core/Inc/usart.h)(0x6AC8F3A1)
 I (../Core/Inc/gpio.h)(0x6AC8DC1A)
 I (..\mycode\servo.h)(0x6ACB7BF0)
 I (..\mycode\OLED.h)(0x6ACCCF98)
-I (..\mycode\my_adc.h)(0x6ACE130D)
+I (..\mycode\my_adc.h)(0x6ADB7B2F)
 I (..\mycode\DHT11.h)(0x6ACE130D)
 I (..\mycode\Flash.h)(0x6ACE4506)
 I (..\mycode\key.h)(0x6ACBE137)
 I (..\mycode\menu.h)(0x6ACD3116)
 I (..\mycode\mode.h)(0x6ACD32F0)
+I (..\mycode\Bluetooth.h)(0x6ADB7DED)
 I (..\mycode\demo.h)(0x6ACB73E4)
 F (..\mycode\demo.h)(0x6ACB73E4)()
 F (..\mycode\DHT11.c)(0x6ACE130D)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\dht11.o --omf_browse bishe\dht11.crf --depend bishe\dht11.d)
-I (..\mycode\headfile.h)(0x6ACE3742)
+I (..\mycode\headfile.h)(0x6ADADE06)
 I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\keil5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -1160,12 +1167,13 @@ I (../Core/Inc/usart.h)(0x6AC8F3A1)
 I (../Core/Inc/gpio.h)(0x6AC8DC1A)
 I (..\mycode\servo.h)(0x6ACB7BF0)
 I (..\mycode\OLED.h)(0x6ACCCF98)
-I (..\mycode\my_adc.h)(0x6ACE130D)
+I (..\mycode\my_adc.h)(0x6ADB7B2F)
 I (..\mycode\DHT11.h)(0x6ACE130D)
 I (..\mycode\Flash.h)(0x6ACE4506)
 I (..\mycode\key.h)(0x6ACBE137)
 I (..\mycode\menu.h)(0x6ACD3116)
 I (..\mycode\mode.h)(0x6ACD32F0)
+I (..\mycode\Bluetooth.h)(0x6ADB7DED)
 I (..\mycode\demo.h)(0x6ACB73E4)
 F (..\mycode\DHT11.h)(0x6ACE130D)()
 F (..\mycode\Flash.c)(0x6ACE4507)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\flash.o --omf_browse bishe\flash.crf --depend bishe\flash.d)
@@ -1199,5 +1207,56 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6AC874B4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6AC874B4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6AC874B4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6AC874B4)
-I (..\mycode\my_adc.h)(0x6ACE130D)
+I (..\mycode\my_adc.h)(0x6ADB7B2F)
 F (..\mycode\Flash.h)(0x6ACE4506)()
+F (..\mycode\Bluetooth.c)(0x6ADCEBC9)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../mycode-I.\RTE\_bishe-ID:\keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o bishe\bluetooth.o --omf_browse bishe\bluetooth.crf --depend bishe\bluetooth.d)
+I (..\mycode\headfile.h)(0x6ADADE06)
+I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\keil5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\keil5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
+I (../Core/Inc/main.h)(0x6ACDFE7C)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x6AC874B4)
+I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6ACA7518)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h)(0x6AC874B4)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h)(0x6AC874B4)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h)(0x6AC874B4)
+I (../Drivers/CMSIS/Include/core_cm3.h)(0x6AC874AC)
+I (D:\keil5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6AC874AC)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6AC874AC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6AC874AC)
+I (../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6AC874B4)
+I (D:\keil5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x6AC874B4)
+I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x6AC874B4)
+I (../Core/Inc/adc.h)(0x6ACA7517)
+I (../Core/Inc/dma.h)(0x6AC8F45E)
+I (../Core/Inc/tim.h)(0x6ACDF48E)
+I (../Core/Inc/usart.h)(0x6AC8F3A1)
+I (../Core/Inc/gpio.h)(0x6AC8DC1A)
+I (..\mycode\servo.h)(0x6ACB7BF0)
+I (..\mycode\OLED.h)(0x6ACCCF98)
+I (..\mycode\my_adc.h)(0x6ADB7B2F)
+I (..\mycode\DHT11.h)(0x6ACE130D)
+I (..\mycode\Flash.h)(0x6ACE4506)
+I (..\mycode\key.h)(0x6ACBE137)
+I (..\mycode\menu.h)(0x6ACD3116)
+I (..\mycode\mode.h)(0x6ACD32F0)
+I (..\mycode\Bluetooth.h)(0x6ADB7DED)
+I (..\mycode\demo.h)(0x6ACB73E4)
+F (..\mycode\Bluetooth.h)(0x6ADB7DED)()

@@ -1130,6 +1130,16 @@
               <FileType>5</FileType>
               <FilePath>..\mycode\Flash.h</FilePath>
             </File>
+            <File>
+              <FileName>Bluetooth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mycode\Bluetooth.c</FilePath>
+            </File>
+            <File>
+              <FileName>Bluetooth.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\mycode\Bluetooth.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

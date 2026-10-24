@@ -47,4 +47,5 @@ bishe\dht11.o: ..\mycode\Flash.h
 bishe\dht11.o: ..\mycode\key.h
 bishe\dht11.o: ..\mycode\menu.h
 bishe\dht11.o: ..\mycode\mode.h
+bishe\dht11.o: ..\mycode\Bluetooth.h
 bishe\dht11.o: ..\mycode\demo.h

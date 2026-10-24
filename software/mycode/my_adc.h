@@ -1,11 +1,17 @@
 #ifndef __MY_ADC_H
 #define __MY_ADC_H
 
+typedef enum         //å¤©æ°”çŠ¶æ€
+{
+    rain,
+    sun,
+}weather_status;
+
 extern int light,temperature,humidity;
 extern uint16_t AD_Value[2];
-extern int weather_flag;	//0ÎªÓêÌì£¬1ÎªÇçÌì
-extern int16_t threshold_light;			//¹âÕÕãĞÖµ£¨¹âÔ½°µÖµÔ½´ó£©
-extern int16_t threshold_humidity;		//Êª¶ÈãĞÖµ
+extern weather_status weather_flag;	//0é›¨å¤©ï¼Œ1æ™´å¤©
+extern int16_t threshold_light;			//å…‰ç…§é˜ˆå€¼
+extern int16_t threshold_humidity;		//æ¹¿åº¦é˜ˆå€¼
 
 void adc_init(void);
 void Photosensitive_adc(void);

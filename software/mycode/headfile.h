@@ -20,6 +20,7 @@
 #include "key.h"
 #include "menu.h"
 #include "mode.h"
+#include "Bluetooth.h"
 
 #include "demo.h"
 
